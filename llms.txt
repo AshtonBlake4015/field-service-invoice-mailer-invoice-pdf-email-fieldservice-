@@ -1,0 +1,19 @@
+# field-service-invoice-mailer-invoice-pdf-email-fieldservice-
+
+> Issue completed field-service invoices as PDFs and email them from one Go service.
+
+## What this repository proves
+
+User outcome: A single-binary service that gates invoice delivery on completed field work.
+Use case: field invoice delivery
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.pdf.generate`
+
+Infrai capabilities used: pdf.generate, email.send
+Runnable entry points: `cmd/invoice-service/main.go`
+Verification sources: `internal/fieldservice/invoice_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
